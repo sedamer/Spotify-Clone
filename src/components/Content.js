@@ -1,12 +1,20 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+import Collection from "../views/Collection";
+import Home from "../views/Home";
 import Navbar from "./Navbar";
-import React from "react";
+import Search from "../views/Search";
 
 function Content() {
   return (
-    <div className="">
+    <BrowserRouter>
       <Navbar />
-      Content
-    </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/search" element={<Search />} />
+        <Route path="/collection" element={<Collection />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

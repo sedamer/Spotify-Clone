@@ -4,11 +4,15 @@
 
 @layer base {
   html,
-  body {
-    @apply h-full bg-backdrop text-white;
+  body,
+  #root {
+    @apply h-full bg-backdrop text-white antialiased;
   }
-}
-
-.content {
-  @apply flex;
+  #root {
+    @apply flex flex-col;
+  }
+  .content {
+    height: calc(100% - theme("spacing.24"));
+    @apply flex;
+  }
 }
