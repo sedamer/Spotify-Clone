@@ -2,6 +2,7 @@ import { matchPath, useLocation } from "react-router-dom";
 
 import Navigation from "./Navbar/Navigation";
 import React from "react";
+import Search from "../views/Search";
 
 function Navbar() {
   const location = useLocation();
@@ -15,9 +16,9 @@ function Navbar() {
   );
 
   return (
-    <nav className="h-[3.75rem] flex items-center justify-between px-8 relative z-10">
+    <nav className="h-16 w-full flex items-center relative z-30">
       <Navigation />
-      {match && <div>Search kısmındasın</div>}
+      {match && <Search />}
     </nav>
   );
 }

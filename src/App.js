@@ -4,7 +4,6 @@ import Content from "./components/Content";
 import Footer from "./components/Footer";
 import React from "react";
 import SideBar from "./components/SideBar";
-
 function App() {
   return (
     <>

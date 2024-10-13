@@ -1,4 +1,3 @@
-import DownloadApp from "./SideBar/DownloadApp";
 import Icon from "../Icons";
 import Menu from "./SideBar/Menu";
 import Playlist from "./SideBar/Playlist";
@@ -48,8 +47,6 @@ function SideBar() {
       </nav>
 
       <Playlist />
-
-      <DownloadApp />
     </div>
   );
 }
