@@ -9,7 +9,7 @@ function Menu() {
       <ul className="flex flex-col">
         <li>
           <a
-            href="#"
+            href="/home"
             className="flex h-10 items-center text-sm text-link text-white hover:text-white  bg-secondary rounded gap-x-4"
           >
             <span>
@@ -20,7 +20,7 @@ function Menu() {
         </li>
         <li>
           <a
-            href="#"
+            href="/search"
             className="flex h-10 items-center  text-link hover:text-white gap-x-4"
           >
             <span>
@@ -31,7 +31,7 @@ function Menu() {
         </li>
         <li>
           <a
-            href="#"
+            href="/collection"
             className="flex h-10 items-center  text-link hover:text-white gap-x-4"
           >
             <span>
