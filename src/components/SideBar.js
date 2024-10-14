@@ -6,14 +6,14 @@ import logo from "../assets/logo.svg";
 
 function SideBar() {
   return (
-    <div className="p-6 ">
+    <div className="p-6 flex flex-shrink-0 flex-col w-80">
       <img src={logo} alt="logo" className="h-10 w-80" />
       <Menu />
       <nav className="mt-6">
         <ul>
           <li>
             <a
-              href="#"
+              href="/"
               className="py-2 text-link  flex items-center hover:text-white"
             >
               <span className="flex items-center text-link  gap-x-4 px-2">
@@ -24,7 +24,7 @@ function SideBar() {
           </li>
           <li>
             <a
-              href="#"
+              href="/"
               className="py-2 text-link flex items-center hover:text-white"
             >
               <span className="flex items-center text-link  gap-x-4 px-2">

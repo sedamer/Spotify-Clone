@@ -9,7 +9,7 @@ function Playlist() {
         {new Array(9).fill(0).map((_, index) => (
           <li>
             <a
-              href="#"
+              href="/"
               className="text-link hover:text-white flex h-8 py-2 items-center"
             >
               yıldızların peşinde
