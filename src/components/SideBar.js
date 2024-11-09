@@ -2,12 +2,12 @@ import Icon from "../Icons";
 import Menu from "./SideBar/Menu";
 import Playlist from "./SideBar/Playlist";
 import React from "react";
-import logo from "../assets/logo.svg";
+import logo from "../assets/Spotify_Full_Logo_RGB_White.png";
 
 function SideBar() {
   return (
     <div className="p-6 flex flex-shrink-0 flex-col w-80">
-      <img src={logo} alt="logo" className="h-10 w-80" />
+      <img src={logo} alt="logo" className="h-25 w-40" />
       <Menu />
       <nav className="mt-6">
         <ul>

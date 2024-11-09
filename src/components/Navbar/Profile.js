@@ -26,7 +26,7 @@ function Profile() {
           <MenuItems
             anchor="bottom"
             className="absolute top-full
-        right-0 w-52 bg-active:white"
+        right-0 w-52 bg-active:white pr-5"
           >
             <MenuItem>
               <a

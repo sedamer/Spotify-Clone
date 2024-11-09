@@ -12,7 +12,7 @@ function Content() {
         <Navbar />
         <div className="px-8 py-5">
           <Routes>
-            <Route path="/home" element={<Home />} />
+            <Route path="/" element={<Home />} />
             <Route path="/search" element={<Search />} />
             <Route path="/collection" element={<Collection />} />
           </Routes>
