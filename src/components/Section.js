@@ -26,7 +26,7 @@ function Section({ title, more = false, items = [] }) {
             to={more}
             className="text-link text-xs uppercase hover:underline"
           >
-            Seee All
+            See All
           </NavLink>
         )}
       </header>
