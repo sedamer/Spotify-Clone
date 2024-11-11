@@ -2,9 +2,13 @@ import Icon from "../Icons";
 import Menu from "./SideBar/Menu";
 import Playlist from "./SideBar/Playlist";
 import React from "react";
+import SideBarCover from "./SideBar/SideBarCover";
 import logo from "../assets/Spotify_Full_Logo_RGB_White.png";
+import { useSelector } from "react-redux";
 
 function SideBar() {
+  const sidebar = useSelector((state) => state.player.sidebar);
+
   return (
     <div className="p-6 flex flex-shrink-0 flex-col w-80">
       <img src={logo} alt="logo" className="h-25 w-40" />
@@ -47,6 +51,8 @@ function SideBar() {
       </nav>
 
       <Playlist />
+
+      {sidebar && <SideBarCover />}
     </div>
   );
 }

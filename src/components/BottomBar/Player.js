@@ -1,24 +1,69 @@
+import React, { useEffect } from "react";
+import { setControls, setPlaying, setSidebar } from "../stores/player";
+import { useDispatch, useSelector } from "react-redux";
+
 import Icon from "../../Icons";
 import { Range } from "react-range";
-import React from "react";
 import secondsToTime from "./utils";
 import { useAudio } from "react-use";
-import { useMemo } from "react";
+
+// import { useMemo } from "react"; // tüm bileşenlerin içindeki fonksiyonlar yeniden çalıştırılır.
 
 function Player() {
-  // const [values, setValues] = React.useState([50]);
+  const dispatch = useDispatch();
+  const { current, sidebar } = useSelector((state) => state.player);
   const [audio, state, controls, ref] = useAudio({
-    src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
+    src: current?.src,
   });
-  const VolumeFullIcon = useMemo(() => {
-    if (state.volume === 0 || state.muted) return "volumeMuted";
-    if (state.volume > 0 && state.volume < 0.33) return "volumeLow";
-    if (state.volume >= 0.33 && state.volume < 0.66) return "volumeNormal";
-    return "volumeFull";
-  }, [state.volume, state.muted]);
+  useEffect(() => {
+    dispatch(setControls(controls));
+  }, []);
+  useEffect(() => {
+    dispatch(setPlaying(state.playing));
+  }, [state.playing]);
+  useEffect(() => {
+    controls.play();
+  }, [current]);
+  // const VolumeFullIcon = useMemo(() => {
+  //   if (state.volume === 0 || state.muted) return "volumeMuted";
+  //   if (state.volume > 0 && state.volume < 0.33) return "volumeLow";
+  //   if (state.volume >= 0.33 && state.volume < 0.66) return "volumeNormal";
+  //   return "volumeFull";
+  // }, [state.volume, state.muted]);
   return (
     <div className="flex justify-between items-center h-full">
-      <div className="min-w-[11.25rem] w-[30%]">sol</div>
+      <div className="min-w-[11.25rem] w-[30%] flex items-center">
+        {current && (
+          <div className="flex items-center">
+            <div className="flex items-center mr-5 ">
+              {!sidebar && (
+                <div className="w-14 h-14 mr-2 relative ">
+                  <img src={current.img} alt="" />
+                  <button
+                    onClick={() => dispatch(setSidebar(true))}
+                    className="w-6 h-6 bg-black opacity-0 group-hover:opacity-60 hover:!opacity-100 hover:scale-[1.06] rotate-90 rounded-full absolute top-1 right-1 flex items-center justify-center"
+                  >
+                    <Icon size={16} name={"ArrowLeftIcon"} />
+                  </button>
+                </div>
+              )}
+              <div>
+                <h5 className="text-sm line-clamp-1">{current.title}</h5>
+                <p className="text-[0.688rem] text-white text-opacity-70">
+                  {current.subtitle}
+                </p>
+              </div>
+            </div>
+            <button className=" w-5 h-5 flex items-center justify-center text-white text-opacity-70 mr-3 hover:text-opacity-100 ">
+              <Icon name={"heart"} />
+            </button>
+            <button className=" w-5 h-5 flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
+              <Icon name={"PictureInPictureIcon"} />
+            </button>
+          </div>
+        )}
+      </div>
+
       <div className=" max-w-[45.125rem] w-[40%] flex flex-col items-center ">
         <div className="flex items-center gap-x-5">
           <button className="flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
