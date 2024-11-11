@@ -17,7 +17,6 @@ function Playlist() {
           </li>
         ))}
       </ul>
-      {/* <DownloadApp /> */}
     </nav>
   );
 }

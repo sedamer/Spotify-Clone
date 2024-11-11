@@ -13,12 +13,12 @@ function Profile() {
       {({ open }) => (
         <>
           <MenuButton
-            className={`flex items-center h-8 rounded-full gap-x-2 pr-2 ${
+            className={`flex items-center h-8 rounded-full gap-x-2 pr-3 ${
               open ? "bg-active" : "white"
             }`}
           >
             <img src={user.avatar} alt="" className="w-8 h-8 rounded-full" />
-            <span>{user.name}</span>
+            <span className="flex-shrink-0">{user.name}</span>{" "}
             <span className={open && "rotate-180"}>
               <Icon name={"downDir"} size={18} />
             </span>

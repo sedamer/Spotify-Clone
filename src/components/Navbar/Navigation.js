@@ -1,13 +1,14 @@
 import Icon from "../../Icons";
-import Profile from "./Profile";
 import { useNavigate } from "react-router-dom";
+
+// import Profile from "./Profile";
 
 // use "useNavigate" !
 
 function Navigation() {
   const navigate = useNavigate();
   return (
-    <nav className="flex items-center justify-between w-full px-4">
+    <nav className="flex items-center justify-between px-4">
       <div className="flex gap-x-4">
         <button
           onClick={() => navigate(-1)}
@@ -23,7 +24,7 @@ function Navigation() {
         </button>
       </div>
 
-      <Profile />
+      {/* <Profile /> */}
     </nav>
   );
 }
