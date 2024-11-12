@@ -1,7 +1,7 @@
 export default [
   {
     id: 1,
-    title: "Parti",
+    title: "Party",
     cover: "https://i.scdn.co/image/ab67fb8200005caf0b0d0bfac454671832311615",
     color: "#8d67ab",
   },
