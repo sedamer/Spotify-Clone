@@ -1,8 +1,6 @@
 import Icon from "../../Icons";
 import { useNavigate } from "react-router-dom";
 
-// import Profile from "./Profile";
-
 // use "useNavigate" !
 
 function Navigation() {
@@ -23,8 +21,6 @@ function Navigation() {
           <Icon name="next" />
         </button>
       </div>
-
-      {/* <Profile /> */}
     </nav>
   );
 }

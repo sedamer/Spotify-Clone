@@ -15,7 +15,7 @@ function Search() {
         type="text"
         id="search-input"
         className="h-10 pl-12 outline-none text-black font-medium bg-white rounded-3xl text-sm placeholder-black/50 max-w-full w-[22.75rem]"
-        placeholder="Sanatçılar, şarkılar veya podcast'ler"
+        placeholder="Artists, songs and podcasts"
       />
     </div>
   );

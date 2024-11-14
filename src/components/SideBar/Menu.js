@@ -17,7 +17,7 @@ function Menu() {
             <span>
               <Icon name="home" />
             </span>
-            Ana Sayfa
+            Home
           </a>
         </li>
         <li>
@@ -30,7 +30,7 @@ function Menu() {
             <span>
               <Icon name="search" />
             </span>
-            Ara
+            Search
           </a>
         </li>
         <li>
@@ -43,7 +43,7 @@ function Menu() {
             <span>
               <Icon name="collection" />
             </span>
-            Kitaplığım
+            My Library
           </a>
         </li>
       </ul>

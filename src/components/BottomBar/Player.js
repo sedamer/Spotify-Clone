@@ -7,8 +7,6 @@ import { Range } from "react-range";
 import secondsToTime from "./utils";
 import { useAudio } from "react-use";
 
-// import { useMemo } from "react"; // tüm bileşenlerin içindeki fonksiyonlar yeniden çalıştırılır.
-
 function Player() {
   const dispatch = useDispatch();
   const { current, sidebar } = useSelector((state) => state.player);
@@ -24,12 +22,7 @@ function Player() {
   useEffect(() => {
     controls.play();
   }, [current]);
-  // const VolumeFullIcon = useMemo(() => {
-  //   if (state.volume === 0 || state.muted) return "volumeMuted";
-  //   if (state.volume > 0 && state.volume < 0.33) return "volumeLow";
-  //   if (state.volume >= 0.33 && state.volume < 0.66) return "volumeNormal";
-  //   return "volumeFull";
-  // }, [state.volume, state.muted]);
+
   return (
     <div className="flex justify-between items-center h-full">
       <div className="min-w-[11.25rem] w-[30%] flex items-center">

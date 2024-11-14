@@ -23,7 +23,7 @@ function SideBar() {
               <span className="flex items-center text-link  gap-x-4 px-2">
                 <Icon name="plus" />
               </span>
-              Çalma Listesi Oluştur
+              Create Playlist
             </a>
           </li>
           <li>
@@ -34,7 +34,7 @@ function SideBar() {
               <span className="flex items-center text-link  gap-x-4 px-2">
                 <Icon name="heart" />
               </span>
-              Beğenilen Şarkılar
+              Liked Songs
             </a>
           </li>
         </ul>
@@ -46,7 +46,7 @@ function SideBar() {
           <span className="flex items-center text-link bg-transparent px-2 gap-x-4 ">
             <Icon name="lastPlay" />
           </span>
-          Son Çalınanlar
+          Last Played
         </nav>
       </nav>
 

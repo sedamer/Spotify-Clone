@@ -5,8 +5,6 @@ import Profile from "./Navbar/Profile";
 import React from "react";
 import Search from "./Navbar/Search";
 
-// import Search from "../views/Search";
-
 function Navbar() {
   const location = useLocation();
   const match = matchPath(

@@ -166,16 +166,16 @@ function Profile() {
         </div>
         <div className="flex  justify-start items-center gap-x-5 p-2">
           <p className="text-link font-medium flex items-center justify-center">
-            Herkese Açık 4 Çalma Listesi .
+            4 Public Playlists .
           </p>
           <p className="text-white font-medium flex items-center justify-center">
-            8 Takipçi . Takip Edilen:10
+            8 Followers . Following:10
           </p>
         </div>
       </div>
       <div className="pt-5 space-y-4">
         <div className="flex items-center justify-between gap-x-5">
-          <Title title="Bu ayın en çok dinlenen sanatçıları" />
+          <Title title="Most streamed artists this month" />
 
           <button className="text-link text-xs  hover:underline font-medium">
             see all
@@ -189,7 +189,7 @@ function Profile() {
       </div>
       <div className="pt-5 space-y-4">
         <div className="flex items-center justify-between gap-x-5">
-          <Title title="Bu ayın en çok dinlenen parçaları" />
+          <Title title="Most listened tracks this month" />
 
           <button className="text-link text-xs hover:underline font-medium">
             see all
@@ -221,7 +221,7 @@ function Profile() {
       </div>
       <div className="pt-5 space-y-4">
         <div className="flex items-center justify-between gap-x-5">
-          <Title title="Herkese Açık Çalma Listesi" />
+          <Title title="Public Playlist" />
           <button className="text-link text-xs  hover:underline font-medium">
             see all
           </button>

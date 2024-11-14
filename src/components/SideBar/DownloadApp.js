@@ -7,7 +7,7 @@ function DownloadApp() {
       <span className="flex items-center flex-shrink-0 text-link px-2 hover:text-white">
         <Icon name="download" size={20} />
       </span>
-      Uygulamayı yükle
+      Install the app{" "}
     </div>
   );
 }
