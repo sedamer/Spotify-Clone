@@ -31,7 +31,7 @@ function Profile() {
             <MenuItem>
               <a
                 className="h-10 flex items-center rounded bg-transparent text-white data-[focus]:bg-white/10"
-                href="/settings"
+                href="/account"
               >
                 Account
                 <span className="flex items-center ml-auto">
@@ -42,7 +42,7 @@ function Profile() {
             <MenuItem>
               <a
                 className="h-10 flex items-center rounded bg-transparent text-white data-[focus]:bg-white/10"
-                href="/settings"
+                href="/profile"
               >
                 {" "}
                 Profile
@@ -51,7 +51,7 @@ function Profile() {
             <MenuItem>
               <a
                 className="h-10 flex items-center rounded bg-transparent text-white data-[focus]:bg-white/10"
-                href="/settings"
+                href="/logout"
               >
                 {" "}
                 Log Out{" "}

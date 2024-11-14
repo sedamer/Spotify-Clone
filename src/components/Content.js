@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Collection from "../views/Collection";
 import Home from "../views/Home";
 import Navbar from "./Navbar";
+import Profile from "../views/Profile";
 import Search from "../views/Search";
 
 function Content() {
@@ -15,6 +16,7 @@ function Content() {
             <Route path="/" element={<Home />} />
             <Route path="/search" element={<Search />} />
             <Route path="/collection" element={<Collection />} />
+            <Route path="/profile" element={<Profile />} />
           </Routes>
         </div>
       </main>
