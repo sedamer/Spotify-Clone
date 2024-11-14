@@ -36,15 +36,19 @@ function Collection() {
   ];
   return (
     <div>
-      <div className="flex justify-between items-center border-b border-gray-">
+      <div className="flex justify-between items-center border-b border-gray-50">
         <Title title="Collection" />
         <button>
           <Icon name={"plus"} size={20} icon="plus" />{" "}
         </button>
       </div>
-      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 bg-pink">
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 bg-pink p-3">
         {items.map((item) => (
-          <SongItem key={item.id} item={item} />
+          <SongItem
+            key={item.id}
+            item={item}
+            className={"bg-tertiary p-4 rounded group hover:bg-secondary"}
+          />
         ))}
       </div>
     </div>

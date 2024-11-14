@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 import React from "react";
 import { setCurrent } from "../components/stores/player";
 
-function SongItem({ item }) {
+function SongItem({ item, className }) {
   const dispatch = useDispatch();
   const { current, playing, controls } = useSelector((state) => state.player);
   const types = (item) => {
@@ -32,10 +32,7 @@ function SongItem({ item }) {
   };
 
   return (
-    <NavLink
-      key={item.id}
-      className="bg-tertiary p-4 rounded group hover:bg-secondary"
-    >
+    <NavLink key={item.id} className={`p-4 rounded ${className}`}>
       <div className="pt-[100%] relative mb-4 ">
         <img
           src={item.img}
